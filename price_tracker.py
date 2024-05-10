@@ -14,5 +14,5 @@ cookies = base_response.cookies
 product_response = r.get(url, headers=headers, cookies=cookies)
 
 soup = bs4.BeautifulSoup(product_response.text, features='lxml')
-price_lines = soup.findAll(class_="a-price_whole")
+price_lines = soup.findAll(class_="a-price-whole")
 print(price_lines[0])
